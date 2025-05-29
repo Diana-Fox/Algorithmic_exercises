@@ -1,19 +1,22 @@
 package sort
 
-// 选择排序
+// SelectSort 选择排序——每次选最小的，放到最对应位置
 type SelectSort[T any] struct {
-	//SelectSort(array []T) []T
+}
+
+func NewSelectSort[T any]() *SelectSort[T] {
+	return &SelectSort[T]{}
 }
 
 // 通过泛型的方式来进行选择排序
-func (s *SelectSort[T]) Sort(array []T, f func(a T, b T) bool) []T {
+func (s *SelectSort[T]) Sort(array []T, f func(a T, b T) int) []T {
 	if len(array) < 2 {
 		return array
 	}
 	for i := 0; i < len(array); i++ { //对第i位进行排序
 		minx := i //假设每次最小值都是剩余未排序的第一个值
 		for j := i + 1; j < len(array); j++ {
-			if f(array[minx], array[j]) {
+			if f(array[minx], array[j]) > 0 {
 				minx = j
 			}
 		}
