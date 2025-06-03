@@ -29,7 +29,13 @@ func TestSort(t *testing.T) {
 		//{name: "冒泡排序", s: NewBubbleSort[int](), args: args[int]{arr, func(a int, b int) int {
 		//	return a - b
 		//}}, want: want},
-		{name: "堆排序", s: NewHeapSort[int](), args: args[int]{arr, func(a int, b int) int {
+		//{name: "堆排序", s: NewHeapSort[int](), args: args[int]{arr, func(a int, b int) int {
+		//	return a - b
+		//}}, want: want},
+		//{name: "奇偶排序", s: NewOddEvenSort[int](), args: args[int]{arr, func(a int, b int) int {
+		//	return a - b
+		//}}, want: want},
+		{name: "归并排序", s: NewMergeSort[int](), args: args[int]{arr, func(a int, b int) int {
 			return a - b
 		}}, want: want},
 	}
