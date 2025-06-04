@@ -35,7 +35,10 @@ func TestSort(t *testing.T) {
 		//{name: "奇偶排序", s: NewOddEvenSort[int](), args: args[int]{arr, func(a int, b int) int {
 		//	return a - b
 		//}}, want: want},
-		{name: "归并排序", s: NewMergeSort[int](), args: args[int]{arr, func(a int, b int) int {
+		//{name: "归并排序", s: NewMergeSort[int](), args: args[int]{arr, func(a int, b int) int {
+		//	return a - b
+		//}}, want: want},
+		{name: "希尔排序", s: NewShellSort[int](), args: args[int]{arr, func(a int, b int) int {
 			return a - b
 		}}, want: want},
 	}
