@@ -1,5 +1,6 @@
 package sort
 
+// 堆排序
 type HeapSort[T any] struct {
 }
 
