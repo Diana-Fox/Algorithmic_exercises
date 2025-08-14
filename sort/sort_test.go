@@ -44,7 +44,10 @@ func TestSort(t *testing.T) {
 		//{name: "锦标赛排序", s: NewTournamentSort[int](), args: args[int]{arr, func(a int, b int) int {
 		//	return a - b
 		//}}, want: want},
-		{name: "鸡尾酒排序", s: NewCocktailSort[int](), args: args[int]{arr, func(a int, b int) int {
+		//{name: "鸡尾酒排序", s: NewCocktailSort[int](), args: args[int]{arr, func(a int, b int) int {
+		//	return a - b
+		//}}, want: want},
+		{name: "快速排序", s: NewQuickSort[int](), args: args[int]{arr, func(a int, b int) int {
 			return a - b
 		}}, want: want},
 	}
