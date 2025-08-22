@@ -20,25 +20,25 @@ func TestSort(t *testing.T) {
 	arr := []int{10, 9, 23, 43, 40, 30}
 	want := []int{9, 10, 23, 30, 40, 43}
 	tests := []testCase[int]{
-		//{name: "选择排序", s: NewSelectSort[int_sort](), args: args[int_sort]{arr, func(a int_sort, b int_sort) int_sort {
+		//{name: "选择排序", s: NewSelectSort[int](), args: args[int]{arr, func(a int, b int) int {
 		//	return a - b
 		//}}, want: want},
-		//{name: "插入排序", s: NewInsertSort[int_sort](), args: args[int_sort]{arr, func(a int_sort, b int_sort) int_sort {
+		//{name: "插入排序", s: NewInsertSort[int](), args: args[int]{arr, func(a int, b int) int {
 		//	return a - b
 		//}}, want: want},
-		//{name: "冒泡排序", s: NewBubbleSort[int_sort](), args: args[int_sort]{arr, func(a int_sort, b int_sort) int_sort {
+		//{name: "冒泡排序", s: NewBubbleSort[int](), args: args[int]{arr, func(a int, b int) int {
 		//	return a - b
 		//}}, want: want},
-		//{name: "堆排序", s: NewHeapSort[int_sort](), args: args[int_sort]{arr, func(a int_sort, b int_sort) int_sort {
+		//{name: "堆排序", s: NewHeapSort[int](), args: args[int]{arr, func(a int, b int) int {
 		//	return a - b
 		//}}, want: want},
-		//{name: "奇偶排序", s: NewOddEvenSort[int_sort](), args: args[int_sort]{arr, func(a int_sort, b int_sort) int_sort {
+		//{name: "奇偶排序", s: NewOddEvenSort[int](), args: args[int]{arr, func(a int, b int) int {
 		//	return a - b
 		//}}, want: want},
-		//{name: "归并排序", s: NewMergeSort[int_sort](), args: args[int_sort]{arr, func(a int_sort, b int_sort) int_sort {
+		//{name: "归并排序", s: NewMergeSort[int](), args: args[int]{arr, func(a int, b int) int {
 		//	return a - b
 		//}}, want: want},
-		//{name: "希尔排序", s: NewShellSort[int_sort](), args: args[int_sort]{arr, func(a int_sort, b int_sort) int_sort {
+		//{name: "希尔排序", s: NewShellSort[int](), args: args[int]{arr, func(a int, b int) int {
 		//	return a - b
 		//}}, want: want},
 		//{name: "锦标赛排序", s: NewTournamentSort[int](), args: args[int]{arr, func(a int, b int) int {
