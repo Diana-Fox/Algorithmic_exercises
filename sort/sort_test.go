@@ -50,7 +50,10 @@ func TestSort(t *testing.T) {
 		//{name: "快速排序", s: NewQuickSort[int](), args: args[int]{arr, func(a int, b int) int {
 		//	return a - b
 		//}}, want: want},
-		{name: "快速排序plus", s: NewQuickSortPlus[int](), args: args[int]{arr, func(a int, b int) int {
+		//{name: "快速排序plus", s: NewQuickSortPlus[int](), args: args[int]{arr, func(a int, b int) int {
+		//	return a - b
+		//}}, want: want},
+		{name: "侏儒排序", s: NewGnomeSort[int](), args: args[int]{arr, func(a int, b int) int {
 			return a - b
 		}}, want: want},
 	}
