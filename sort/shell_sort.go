@@ -7,7 +7,7 @@ func NewShellSort[T any]() *ShellSort[T] {
 	return &ShellSort[T]{}
 }
 
-// Sort 希尔一般用在并发场合
+// Sort 希尔一般用在并发场合，是插入排序的变种
 func (s *ShellSort[T]) Sort(array []T, f func(a T, b T) int) []T {
 	if len(array) < 2 {
 		return array
@@ -21,6 +21,8 @@ func (s *ShellSort[T]) Sort(array []T, f func(a T, b T) int) []T {
 	}
 	return array
 }
+
+// ShellSortStep 每步的处理
 func (s *ShellSort[T]) ShellSortStep(arr []T, start int, gap int, f func(a T, b T) int) []T {
 	for i := start + gap; i < len(arr); i += gap { //编写一个插入排序
 		backup := arr[i]

@@ -19,7 +19,7 @@ func TestSort(t *testing.T) {
 	}
 	arr := []int{10, 2, 23, 43, 40, 30}
 	want := []int{2, 10, 23, 30, 40, 43}
-	ch := make(chan int, len(arr))
+	//ch := make(chan int, len(arr))
 	tests := []testCase[int]{
 		//{name: "选择排序", s: NewSelectSort[int](), args: args[int]{arr, func(a int, b int) int {
 		//	return a - b
@@ -57,8 +57,11 @@ func TestSort(t *testing.T) {
 		//{name: "侏儒排序", s: NewGnomeSort[int](), args: args[int]{arr, func(a int, b int) int {
 		//	return a - b
 		//}}, want: want},
-		{name: "休眠排序", s: NewSleepSort(true, ch), args: args[int]{arr, func(a int, b int) int {
-			return a
+		//{name: "休眠排序", s: NewSleepSort(true, ch), args: args[int]{arr, func(a int, b int) int {
+		//	return a
+		//}}, want: want},
+		{name: "梳子排序", s: NewCombSort[int](), args: args[int]{arr, func(a int, b int) int {
+			return a - b
 		}}, want: want},
 	}
 	for _, tt := range tests {
